@@ -1,6 +1,6 @@
 body {
   margin: 0;
-  font-family: sans-serif; /* A clean, universal font */
+  font-family: sans-serif;
 }
 
 .container {
@@ -10,47 +10,31 @@ body {
   align-items: center;
   height: 100vh;
   padding: 20px;
-  box-sizing: border-box; /* Ensures padding doesn't affect the height */
+  box-sizing: border-box;
+  text-align: center; /* To center the text within the container */
 }
 
 h1 {
   margin-bottom: 20px;
   color: #333;
-}
-
-form {
-  display: flex;
-  flex-direction: column;
-  gap: 15px; /* Adds space between form elements */
-  align-items: center;
+  font-size: 2.5em; /* A more standard size for a heading */
 }
 
 input {
-  border: none; /* Removes all existing borders */
-  border-bottom: 2px solid #333; /* Adds a solid 2px border to the bottom */
-  padding: 10px;
-  width: 250px;
-  background-color: transparent; /* Makes the background transparent */
-  outline: none; /* Removes the border that appears on click */
-}
-
-button {
-  padding: 10px 20px;
   border: none;
-  border-radius: 5px;
-  background-color: #007bff;
-  color: white;
-  cursor: pointer;
-  transition: background-color 0.3s;
-}
-
-button:hover {
-  background-color: #0056b3;
+  border-bottom: 2px solid #333;
+  padding: 10px;
+  width: 300px; /* A more consistent and readable width */
+  font-size: 1.5em;
+  background-color: transparent;
+  outline: none;
+  text-align: center; /* To center the typed text inside the input */
 }
 
 #result-text {
   margin-top: 20px;
-  font-size: 1.2em;
+  font-size: 1.5em; /* A more reasonable size for the output */
   font-weight: bold;
   color: #555;
+  min-height: 1.5em; /* Prevents layout shift when empty */
 }

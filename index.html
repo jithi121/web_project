@@ -8,8 +8,39 @@
   </head>
   <body>
     <div class="container">
-      <h1></h1>
-      <input type="text" placeholder="Type text here" />
+      <h1>Phonetic Alphabet</h1>
+      <input type="text" id="word-input" placeholder="Type text here" />
+      <p id="result-text"></p>
     </div>
   </body>
+  <script>
+      const phoneticMap = {
+        'A': 'Alpha', 'B': 'Bravo', 'C': 'Charlie', 'D': 'Delta',
+        'E': 'Echo', 'F': 'Foxtrot', 'G': 'Golf', 'H': 'Hotel',
+        'I': 'India', 'J': 'Juliett', 'K': 'Kilo', 'L': 'Lima',
+        'M': 'Mike', 'N': 'November', 'O': 'Oscar', 'P': 'Papa',
+        'Q': 'Quebec', 'R': 'Romeo', 'S': 'Sierra', 'T': 'Tango',
+        'U': 'Uniform', 'V': 'Victor', 'W': 'Whiskey', 'X': 'X-ray',
+        'Y': 'Yankee', 'Z': 'Zulu',
+        '0': 'Zero', '1': 'One', '2': 'Two', '3': 'Three',
+        '4': 'Four', '5': 'Five', '6': 'Six', '7': 'Seven',
+        '8': 'Eight', '9': 'Nine'
+      };
+
+      const wordInput = document.getElementById('word-input');
+      const resultText = document.getElementById('result-text');
+
+      wordInput.addEventListener('input', () => {
+        const inputWord = wordInput.value.toUpperCase();
+        let phoneticResult = '';
+
+        for (const char of inputWord) {
+          if (phoneticMap[char]) {
+            phoneticResult += phoneticMap[char] + ' ';
+          }
+        }
+
+        resultText.textContent = phoneticResult.trim();
+      });
+    </script>
 </html>
