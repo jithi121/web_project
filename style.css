@@ -38,3 +38,24 @@ input {
   color: #555;
   min-height: 1.5em; /* Prevents layout shift when empty */
 }
+
+.main_container {
+   display: grid;
+  place-items: center;
+  height: 100vh;
+  margin: 0;
+  background-color: aquamarine;
+}
+
+.main_content {
+  display: grid;
+  place-content: center;
+  height: 500px;
+  width: 500px;
+  background-color: rgb(14, 192, 168);
+}
+
+.sub_container {
+  display: grid;
+  
+    }
